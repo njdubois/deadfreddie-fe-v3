@@ -14,13 +14,13 @@ export default function App() {
       <GlobalStyle />
       <AuthProvider>
         <Router>
-          <Parent background={theme.colors.PitchBlack}>
+          <Parent background={`rgb(33, 37, 41)`}>
             <Nav />
           </Parent>
           <Parent>
             <Routes/>
           </Parent>
-          <Parent background={theme.colors.PitchBlack}>
+          <Parent background={`rgb(33, 37, 41)`}>
             <Footer />
           </Parent>
         </Router>

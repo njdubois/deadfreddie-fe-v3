@@ -2,13 +2,14 @@ import React, {useState} from 'react';
 import StyledRow from "../../Templates/StyledRow";
 import StyledCol from "../../Templates/StyledCol";
 import styled from "styled-components/macro";
+import PhotoGallery from "../../Templates/PhotoGallery";
 
 const PHOTO_ARCHIVE = [
   {
     "year": "1980",
     "sets": [
       {
-        "description": "",
+        "description": "Old School",
         "images": [
           "a1e9dba0bb7adecad8c6d337520893a8.jpg",
           "7358f0653a228160c87c7b825e030c52.jpg",
@@ -361,118 +362,124 @@ const PHOTO_ARCHIVE = [
 ];
 const LATEST_PHOTOS = [
   {
-    "description": "Halloweekend at Montrose Saloon, Chicago IL on October 25, 2024. Photos by Ruta Grigola.",
-    "images": [
-      "1409a9ba2d6bd70e1471578abaac8ada.jpg",
-      "4e275757caa71a6f08bc4bcdc5477f69.jpg",
-      "11bdc21146207297016ef9af67b7fa3b.jpg",
-      "04e28352771e68b30cb95897a57f0281.jpg",
-      "b1190df6bce295534b77cd5292bf3cb4.jpg",
-      "47680ebc329a4f56758632ddfc9c9090.jpg",
-      "80f310dc37ed13c6371114b89ef21765.jpg",
-      "05533c05d165f64f86a3bb2bb57d6f28.jpg",
-      "120444bb8cf6172e086a381d22986568.jpg"
+    "year": "2025",
+    "sets": [
+      {
+        "description": "Halloweekend at Montrose Saloon, Chicago IL on October 25, 2024. Photos by Ruta Grigola.",
+        "images": [
+          "1409a9ba2d6bd70e1471578abaac8ada.jpg",
+          "4e275757caa71a6f08bc4bcdc5477f69.jpg",
+          "11bdc21146207297016ef9af67b7fa3b.jpg",
+          "04e28352771e68b30cb95897a57f0281.jpg",
+          "b1190df6bce295534b77cd5292bf3cb4.jpg",
+          "47680ebc329a4f56758632ddfc9c9090.jpg",
+          "80f310dc37ed13c6371114b89ef21765.jpg",
+          "05533c05d165f64f86a3bb2bb57d6f28.jpg",
+          "120444bb8cf6172e086a381d22986568.jpg"
+        ]
+      },
+      {
+        "description": "Punk Rock Tacos #55 at Cemitas Poblanas in Villa Park, IL on 27 September 2024. Photos by Ed Kost and Ruta Grigola.",
+        "images":
+          [
+            "9db4658c3bf2761b18a66e2e0fe9ac1d.jpg",
+            "330fa91f961cf76c20dbb4aa9d525059.jpg",
+            "f0bcfaa4cdbe81a1146fd9e5032b18f1.jpg",
+            "437d237cd6aa72841fc6ec508fa8f3ed.jpg",
+            "828bfe9e4d91bbca5ff61b5ed099378b.jpg",
+            "b60e9185477e2125baaba47b9ab9c88d.jpg",
+            "f2e4d93d2aa0e0fb3b85baa5cfc8e56c.jpg",
+            "ada2abcfb78b5b4af45c6dc0a9307cfd.jpg",
+            "4bd71c8650682b8d3c08768563205a78.jpg",
+            "e01f8978b3b2c691b105a27f5ddbacd9.jpg",
+            "d97500a6cdd8c47890623b5706fbea74.jpg",
+            "d7d7d8adbb0da337571cfdc7dee50fce.jpg",
+            "32710374decad5fae2332a579c786f48.jpg",
+            "82f2a8812a200bf67b448aa9ab48940d.jpg",
+            "bc93aaf96332858644efd319424525eb.jpg",
+            "fd56b6bb01071146383716ade6097083.jpg",
+            "5f8115b00a9d236961b147d076cd2a92.jpg",
+            "db4ee3f57a66701f590c38deaccec676.jpg",
+            "8d5c4121fd8f79f3c636cb1315993e57.jpg",
+            "5fae1ffe58926649e6870438d1fc48e7.jpg",
+            "601bfe015e0bc2874e2043cbec794dcf.jpg",
+            "6e49ca1dbb545c6186675b66f204a815.jpg",
+            "95ce65d3d7c95777590ce7b588aceeb6.jpg",
+            "9c89be80d4c652d12a69535fc99e7e76.jpg",
+            "5ad140e9db47bf43390d0ed61cf477b8.jpg",
+            "78be14363d59d2f8fc6d3aa85430a8d5.jpg",
+            "659cc80baedc4ffefd30503680c5f06c.jpg",
+            "3e8c53b4021096268c98bda60fa76fe6.jpg"
+          ]
+      },
+      {
+        "description": "Milwaukee Polka Riot at Last Rites in Milwaukee, WI on 7 September 2024; Photos by Ruta Grigola.",
+        "images": [
+          "4e97cdde89d17d1c5df65bad74e1e89c.jpg",
+          "3c6279af0de04b64a74d160dd75a1c75.jpg",
+          "edbb9843274c68aad76fbc93cd7a0c1a.jpg",
+          "90751218dc40197bbd1d6df92fceaaa2.jpg",
+          "19115e7bd1322469eb2ca325670e5ce9.jpg",
+          "35ed945ba5bb804a487339c0c95dbf20.jpg",
+          "3cec3f11b82fd72ffaf402ef1a1deb62.jpg",
+          "3c45c5ad9fcbc1f25e3aaf4ca1bb38e5.jpg",
+          "a32b24641db09a1384a612f4c54669c3.jpg",
+          "5089d792723ea5e5014c4a3e372fdbd5.jpg",
+          "f48e4efd86439cff1ff3e9c3d1738895.jpg",
+          "84c205d543775911de3d0fd3c3965c5d.jpg",
+          "cb0e7ae265d048ea6c6c8c7932ad403e.jpg",
+          "cb0513d4d20826735133e9e439d4fa3c.jpg",
+          "1c55d2ec56effa19f2379d0cf088f591.jpg",
+          "bfb17499919911ccd8f2e27dc45ecd06.jpg",
+          "f801258a03e46c7eefbc3ce7ebe64f4a.jpg",
+          "c15a910b44568ca95d5a51a85183195c.jpg"
+        ]
+      },
+      {
+        "description":
+          "Heroes West in Lemont, IL on 7 August 2024. Photos by Ruta Grigola.",
+        "images":
+          [
+            "39aeffdd447a4fa337103ce7408bde1f.jpg",
+            "d7ab5302b80610118958755f56eddb58.jpg",
+            "f7a2b038220c734cc00e96be170f4148.jpg",
+            "700f89f35dc7d5c7f8596194f70f3aee.jpg",
+            "0ea8a4c240e35c4826c49be40b6b1f70.jpg",
+            "419f25459b19a56bb688993b18e5757e.jpg",
+            "35d146c3b7220f3bc40cdf89d872b3cc.jpg",
+            "63710cc8d66c4f325db8d0aa60fe3558.jpg",
+            "b6d7c73ac7adbc767f527e27be87a7d6.jpg",
+            "067d4782cf39faeff4440082d5b88e95.jpg",
+            "ccd7c079cfc434aa945039a652197e59.jpg",
+            "9ef40d4b511fdf1855664a58f41c8a9f.jpg"
+          ]
+      },
+      {
+        "description":
+          "Cubby Bear Lounge in Chicago, IL on 13 July 2024. Photos by Ruta Grigola.",
+        "images":
+          [
+            "b795606d0cf878ff4c836a2bb46942c1.jpg",
+            "aa9d511911cf7a1bc57b26a124449265.jpg",
+            "7fe8fb3cee7466e746f51acf89ac1bf0.jpg",
+            "74da76d3d26058c55e2c3287a747ba9a.jpg",
+            "c11701601e37ec3706b6c7c4ecd39d56.jpg",
+            "84def42fca76d28e3a572689fed19d45.jpg",
+            "bfdc2f76d3acc154a4b0f1f25675efd3.jpg",
+            "e48f8e96d8f580fdf326717c4ff6cbba.jpg",
+            "07c9c928a9090248188f2b396ba35e46.jpg",
+            "078e0f23c6ee287f36800477771e43c9.jpg",
+            "8fa0ea5d6bdf919e84d0b491c59f2171.jpg",
+            "7bf50a2b2175b9e9fc453f31797fabf9.jpg",
+            "041c731bb349dc2bd2e0bd71366770d8.jpg",
+            "9038af1746f1ab288e7584d5e8b8afbb.jpg",
+            "0c907d641766199078b41df30ec99572.jpg"
+          ]
+      }
     ]
-  },
-  {
-    "description": "Punk Rock Tacos #55 at Cemitas Poblanas in Villa Park, IL on 27 September 2024. Photos by Ed Kost and Ruta Grigola.",
-    "images":
-      [
-        "9db4658c3bf2761b18a66e2e0fe9ac1d.jpg",
-        "330fa91f961cf76c20dbb4aa9d525059.jpg",
-        "f0bcfaa4cdbe81a1146fd9e5032b18f1.jpg",
-        "437d237cd6aa72841fc6ec508fa8f3ed.jpg",
-        "828bfe9e4d91bbca5ff61b5ed099378b.jpg",
-        "b60e9185477e2125baaba47b9ab9c88d.jpg",
-        "f2e4d93d2aa0e0fb3b85baa5cfc8e56c.jpg",
-        "ada2abcfb78b5b4af45c6dc0a9307cfd.jpg",
-        "4bd71c8650682b8d3c08768563205a78.jpg",
-        "e01f8978b3b2c691b105a27f5ddbacd9.jpg",
-        "d97500a6cdd8c47890623b5706fbea74.jpg",
-        "d7d7d8adbb0da337571cfdc7dee50fce.jpg",
-        "32710374decad5fae2332a579c786f48.jpg",
-        "82f2a8812a200bf67b448aa9ab48940d.jpg",
-        "bc93aaf96332858644efd319424525eb.jpg",
-        "fd56b6bb01071146383716ade6097083.jpg",
-        "5f8115b00a9d236961b147d076cd2a92.jpg",
-        "db4ee3f57a66701f590c38deaccec676.jpg",
-        "8d5c4121fd8f79f3c636cb1315993e57.jpg",
-        "5fae1ffe58926649e6870438d1fc48e7.jpg",
-        "601bfe015e0bc2874e2043cbec794dcf.jpg",
-        "6e49ca1dbb545c6186675b66f204a815.jpg",
-        "95ce65d3d7c95777590ce7b588aceeb6.jpg",
-        "9c89be80d4c652d12a69535fc99e7e76.jpg",
-        "5ad140e9db47bf43390d0ed61cf477b8.jpg",
-        "78be14363d59d2f8fc6d3aa85430a8d5.jpg",
-        "659cc80baedc4ffefd30503680c5f06c.jpg",
-        "3e8c53b4021096268c98bda60fa76fe6.jpg"
-      ]
-  },
-  {
-    "description": "Milwaukee Polka Riot at Last Rites in Milwaukee, WI on 7 September 2024.&nbsp; Photos by Ruta Grigola.",
-    "images": [
-      "4e97cdde89d17d1c5df65bad74e1e89c.jpg",
-      "3c6279af0de04b64a74d160dd75a1c75.jpg",
-      "edbb9843274c68aad76fbc93cd7a0c1a.jpg",
-      "90751218dc40197bbd1d6df92fceaaa2.jpg",
-      "19115e7bd1322469eb2ca325670e5ce9.jpg",
-      "35ed945ba5bb804a487339c0c95dbf20.jpg",
-      "3cec3f11b82fd72ffaf402ef1a1deb62.jpg",
-      "3c45c5ad9fcbc1f25e3aaf4ca1bb38e5.jpg",
-      "a32b24641db09a1384a612f4c54669c3.jpg",
-      "5089d792723ea5e5014c4a3e372fdbd5.jpg",
-      "f48e4efd86439cff1ff3e9c3d1738895.jpg",
-      "84c205d543775911de3d0fd3c3965c5d.jpg",
-      "cb0e7ae265d048ea6c6c8c7932ad403e.jpg",
-      "cb0513d4d20826735133e9e439d4fa3c.jpg",
-      "1c55d2ec56effa19f2379d0cf088f591.jpg",
-      "bfb17499919911ccd8f2e27dc45ecd06.jpg",
-      "f801258a03e46c7eefbc3ce7ebe64f4a.jpg",
-      "c15a910b44568ca95d5a51a85183195c.jpg"
-    ]
-  },
-  {
-    "description":
-      "Heroes West in Lemont, IL on 7 August 2024. Photos by Ruta Grigola.",
-    "images":
-      [
-        "39aeffdd447a4fa337103ce7408bde1f.jpg",
-        "d7ab5302b80610118958755f56eddb58.jpg",
-        "f7a2b038220c734cc00e96be170f4148.jpg",
-        "700f89f35dc7d5c7f8596194f70f3aee.jpg",
-        "0ea8a4c240e35c4826c49be40b6b1f70.jpg",
-        "419f25459b19a56bb688993b18e5757e.jpg",
-        "35d146c3b7220f3bc40cdf89d872b3cc.jpg",
-        "63710cc8d66c4f325db8d0aa60fe3558.jpg",
-        "b6d7c73ac7adbc767f527e27be87a7d6.jpg",
-        "067d4782cf39faeff4440082d5b88e95.jpg",
-        "ccd7c079cfc434aa945039a652197e59.jpg",
-        "9ef40d4b511fdf1855664a58f41c8a9f.jpg"
-      ]
-  },
-  {
-    "description":
-      "Cubby Bear Lounge in Chicago, IL on 13 July 2024. Photos by Ruta Grigola.",
-    "images":
-      [
-        "b795606d0cf878ff4c836a2bb46942c1.jpg",
-        "aa9d511911cf7a1bc57b26a124449265.jpg",
-        "7fe8fb3cee7466e746f51acf89ac1bf0.jpg",
-        "74da76d3d26058c55e2c3287a747ba9a.jpg",
-        "c11701601e37ec3706b6c7c4ecd39d56.jpg",
-        "84def42fca76d28e3a572689fed19d45.jpg",
-        "bfdc2f76d3acc154a4b0f1f25675efd3.jpg",
-        "e48f8e96d8f580fdf326717c4ff6cbba.jpg",
-        "07c9c928a9090248188f2b396ba35e46.jpg",
-        "078e0f23c6ee287f36800477771e43c9.jpg",
-        "8fa0ea5d6bdf919e84d0b491c59f2171.jpg",
-        "7bf50a2b2175b9e9fc453f31797fabf9.jpg",
-        "041c731bb349dc2bd2e0bd71366770d8.jpg",
-        "9038af1746f1ab288e7584d5e8b8afbb.jpg",
-        "0c907d641766199078b41df30ec99572.jpg"
-      ]
   }
 ];
+
 const PAST_FLYERS = [
   "0543f81917361f8eec26c3daa6a80258.jpg",
   "f9398b284a7c9130a451db3556f2c6d1.jpg",
@@ -535,7 +542,23 @@ const PAST_FLYERS = [
   "f5e0c03480df37474b25ed3b30b7a59c.jpg"
 ];
 
+const PhotoSetRow = styled(StyledRow)`
+`
+
+const PhotoSetCol = styled(StyledCol)`
+  border: 1px solid blue;
+  cursor: pointer;
+`
+const GalleryRow = styled(StyledRow)`
+
+`
+
+const GalleryCol = styled(StyledCol)`
+  display: none;
+`
+
 const SetDescription = styled.div`
+  border: 1px solid red;
   color: ${({ theme }) => theme.colors.VividYellow};
 `
 const StyledThumbnail = styled.div`
@@ -602,25 +625,24 @@ function Pictures() {
         <StyledCol>
           {LATEST_PHOTOS.map((photo, key) => {
             return (
-              <StyledRow key={key}>
-                <StyledCol>
+              <PhotoSetRow key={key}>
+                <PhotoSetCol>
                   <SetDescription>
                     {photo.description}
                   </SetDescription>
 
-                  <StyledRow>
+                  <GalleryRow>
                     {photo.images.map((image, key) => (
-                      <StyledCol key={key}>
+                      <GalleryCol key={key}>
                         <StyledThumbnail
-                          background={`./Pictures/latest-photos/latest-photos-images/${image}`}
+                          background={`../Pictures/latest-photos/latest-photos-images/${image}`}
                           onClick={() => {window.open(`./Pictures/latest-photos/latest-photos-images/${image}`, '_blank')}}
                         />
-                      </StyledCol>
+                      </GalleryCol>
                     ))}
-                  </StyledRow>
-                </StyledCol>
-
-              </StyledRow>
+                  </GalleryRow>
+                </PhotoSetCol>
+              </PhotoSetRow>
             );
           })}
         </StyledCol>
@@ -649,7 +671,7 @@ function Pictures() {
                         <StyledRow>
                           {set.images.map((image, key) => (
                             <StyledCol key={key}>
-                              <StyledThumbnail background={`./Pictures/photo-archive/images/${image}`} />
+                              <StyledThumbnail background={`../Pictures/photo-archive/images/${image}`} />
                             </StyledCol>
                           ))}
                         </StyledRow>
@@ -674,7 +696,7 @@ function Pictures() {
         {PAST_FLYERS.map((pastFlyer, key) => {
           return (
             <StyledCol key={key}>
-              <StyledThumbnail background={`./Pictures/flyers/images/${pastFlyer}`}/>
+              <StyledThumbnail background={`../Pictures/flyers/images/${pastFlyer}`}/>
             </StyledCol>
           );
         })}
@@ -696,15 +718,19 @@ function Pictures() {
         </PhotoMenuItem>
       </PhotoMenu>
 
+
+
       {showLatestPhotos &&
-        <>
-          {RenderLatestPhotos()}
-        </>
+        <PhotoGallery
+          collection={LATEST_PHOTOS}
+          pathToImages={`${process.env.PUBLIC_URL}/Pictures/latest-photos/images/`}
+        />
       }
       {showPhotoArchive &&
-        <>
-          {RenderPhotoArchive()}
-        </>
+        <PhotoGallery
+          collection={PHOTO_ARCHIVE}
+          pathToImages={`${process.env.PUBLIC_URL}/Pictures/photo-archive/images/`}
+        />
       }
       {showPastFlyers &&
         <>
