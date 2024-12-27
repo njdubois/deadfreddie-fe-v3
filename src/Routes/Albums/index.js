@@ -56,7 +56,7 @@ function Albums() {
 
   const CurrentAlbums = [
     {
-      title: 'The Devil In The Details',
+      title: 'The Devil Is In The Details',
       spotifyUrl: 'https://open.spotify.com/album/3iXYFYDwR3GZDABOOXN8KR?si=oWFwVOuhT3Gp0BgqTAH1Lw',
       appleMusicUrl: 'https://music.apple.com/us/album/the-devil-is-in-the-details/1720995598',
       youtubeMusic: 'https://music.youtube.com/playlist?list=OLAK5uy_lJ4Lf119tAKxHSPfVrkmQhmy3TqKmJ1uQ',
