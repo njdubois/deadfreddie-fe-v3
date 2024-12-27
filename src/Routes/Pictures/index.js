@@ -1,5 +1,7 @@
 import React from 'react';
 import PhotoObjects from "../../Templates/PhotoObjects";
+import StyledRow from "../../Templates/StyledRow";
+import StyledCol from "../../Templates/StyledCol";
 
 const PHOTO_CATEGORY_OPTION_LATEST_PHOTOS_ID = 'LatestPhotos';
 const PHOTO_CATEGORY_OPTION_PHOTO_ARCHIVE_ID = 'PhotoArchive';
@@ -642,9 +644,14 @@ const ALL_PHOTO_CATEGORIES = [
 
 function Pictures() {
   return (
-    <PhotoObjects
-      ALL_PHOTO_CATEGORIES={ALL_PHOTO_CATEGORIES}
-    />
+    <StyledRow>
+      <StyledCol title='Photos - Select a gallary to get started.'>
+
+        <PhotoObjects
+          ALL_PHOTO_CATEGORIES={ALL_PHOTO_CATEGORIES}
+        />
+      </StyledCol>
+    </StyledRow>
   );
 }
 

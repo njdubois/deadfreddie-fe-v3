@@ -83,6 +83,7 @@ function Albums() {
     <>
       <StyledRow>
         <StyledCol
+          title='Listen to Dead Freddie'
           lg={12}
         >
           <StyledRow>

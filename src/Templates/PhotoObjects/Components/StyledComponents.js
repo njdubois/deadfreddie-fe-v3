@@ -81,7 +81,7 @@ export const ImageViewerWrapper = styled.div`
 
 `;
 export const ViewedImage = styled.img`
-  width: 400px;
+  height: 400px;
 `;
 
 export const PhotoMenu = styled.div`

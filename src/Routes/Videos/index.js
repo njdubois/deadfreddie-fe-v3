@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import styled from 'styled-components/macro';
 import StyledRow from "../../Templates/StyledRow";
 import StyledCol from "../../Templates/StyledCol";
+import YouTubeLogo from "./Youtube_Logo.png";
 
 const VideoWrapper = styled.div`
   padding: .5rem;
+  cursor: pointer;
 `
 
 const VideoTitle = styled.div`
@@ -38,14 +40,20 @@ const Img = styled.img`
   width: 100%;
 `
 
+const YoutubeImage = styled.img`
+  width: 150px;
+  padding: 2rem;
+`
+
 function Videos() {
   const [selectedVideo, setSelectedVideo] = useState(false);
 
   const videoData = [
     {
-      "filename": "vm2YvHswgpQ",
-      "title": `Stage Brain`,
-      "description":`Dead Freddie Punk Pop: Is "Stage Brain" a Mad, Sad, Bad, Glad State of Mind?`
+      "url": "https://www.youtube.com/@deadfreddie3792",
+      "image": YouTubeLogo,
+      "title": `Please Subscribe!`,
+      "description":`Subscribe to Dead Freddies Youtube Channel Today!`
     },
     {
       "filename":"a0jh323397I",
@@ -67,12 +75,27 @@ function Videos() {
   const mapBandVideos = () => {
     return videoData.map( (video, key) => {
       return (
-        <StyledCol key={key} onClick={() => setSelectedVideo(video)} sm={6} md={4} lg={3}>
+        <StyledCol
+          key={key}
+          onClick={() => {
+            if (video.url) {
+              window.open(video.url, "_blank");
+            } else {
+              setSelectedVideo(video)
+            }
+          }}
+          sm={6} md={4} lg={3}
+        >
           <VideoWrapper>
             <VideoTitle>
               {video.title}
             </VideoTitle>
-            <Img src={`http://img.youtube.com/vi/${video.filename}/0.jpg`}  alt={video.title}/>
+            {video.image &&
+              <Img src={video.image}  alt={video.title}/>
+            }
+            {!video.image &&
+              <Img src={`http://img.youtube.com/vi/${video.filename}/0.jpg`}  alt={video.title}/>
+            }
             <VideoTitle>
               {video.description}
             </VideoTitle>
@@ -85,13 +108,15 @@ function Videos() {
   return (
     <>
       {!selectedVideo &&
-        <StyledRow>
-          <StyledCol title='Youtube'>
-            <StyledRow>
-              {mapBandVideos()}
-            </StyledRow>
-          </StyledCol>
-        </StyledRow>
+        <>
+          <StyledRow>
+            <StyledCol title='Dead Freddie on Youtube'>
+              <StyledRow>
+                {mapBandVideos()}
+              </StyledRow>
+            </StyledCol>
+          </StyledRow>
+        </>
       }
 
       {selectedVideo &&
