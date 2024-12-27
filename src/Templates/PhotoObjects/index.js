@@ -1,14 +1,14 @@
 import React, {useContext} from 'react';
 import {
   GalleryCol,
-  GalleryRow, PhotoMenu, PhotoMenuItem,
+  GalleryRow, ImageViewerWrapper, PhotoMenu, PhotoMenuItem,
   PhotoMenuOption,
   PhotoMenuSelectorWrapper,
   PhotoSetCol,
   PhotoSetDescription,
   PhotoSetLabel,
   PhotoSetRow,
-  StyledThumbnail, ViewedImage
+  StyledThumbnail, StyledThumbnailWrapper, ViewedImage
 } from "./Components/StyledComponents";
 import {PhotoObjectsContext} from "./Context/PhotoObjectsContext";
 
@@ -27,10 +27,12 @@ function PhotoObjects({ALL_PHOTO_CATEGORIES}) {
   return (
     <>
       {currentImage && <>
-        <ViewedImage
-          src={`${process.env.PUBLIC_URL}/Pictures/${currentPhotoObject.id}/images/${currentImage}`}
-          onClick={ () => {window.open(`${process.env.PUBLIC_URL}/Pictures/${currentPhotoObject.id}/images/${currentImage}`, '_blank')}}
-        />
+        <ImageViewerWrapper>
+          <ViewedImage
+            src={`${process.env.PUBLIC_URL}/Pictures/${currentPhotoObject.id}/images/${currentImage}`}
+            onClick={ () => {window.open(`${process.env.PUBLIC_URL}/Pictures/${currentPhotoObject.id}/images/${currentImage}`, '_blank')}}
+          />
+        </ImageViewerWrapper>
 
         <PhotoMenuSelectorWrapper>
         {currentPhotoSet?.images.indexOf(currentImage) > 0 && <>
@@ -108,10 +110,12 @@ function PhotoObjects({ALL_PHOTO_CATEGORIES}) {
                     {photoSet.images.map( (image, key) => {
                       return (
                         <GalleryCol key={key}>
-                          <StyledThumbnail
-                            onClick={ () => setCurrentImage(image)}
-                            background={`${process.env.PUBLIC_URL}/Pictures/${currentPhotoObject.id}/images/${image}`}
-                          />
+                          <StyledThumbnailWrapper>
+                            <StyledThumbnail
+                              onClick={ () => setCurrentImage(image)}
+                              background={`${process.env.PUBLIC_URL}/Pictures/${currentPhotoObject.id}/images/${image}`}
+                            />
+                          </StyledThumbnailWrapper>
                         </GalleryCol>
                       );
                     })}

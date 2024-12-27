@@ -57,8 +57,18 @@ export const SetDescription = styled.div`
   background-image: ${props => `url("${props.background}")`};
   color: ${({ theme, ...props }) => props.open ? theme.colors.VividYellow : theme.colors.ElectricRed};
 `
+
+export const StyledThumbnailWrapper = styled.div`
+  display: inline-block;
+  padding: .02rem;
+  margin: .2rem;
+  border: 1px solid rgba(256,256,256,.1);
+  background-color: rgba(256,256,256,.01);
+`
+
 export const StyledThumbnail = styled.div`
   background-image: ${props => `url("${props.background}")`};
+
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
