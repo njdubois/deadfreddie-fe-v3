@@ -26,39 +26,61 @@ function PhotoObjects({ALL_PHOTO_CATEGORIES}) {
 
   return (
     <>
-      {currentImage && <>
-        <ImageViewerWrapper>
-          <ViewedImage
-            src={`${process.env.PUBLIC_URL}/Pictures/${currentPhotoObject.id}/images/${currentImage}`}
-            onClick={ () => {window.open(`${process.env.PUBLIC_URL}/Pictures/${currentPhotoObject.id}/images/${currentImage}`, '_blank')}}
-          />
-        </ImageViewerWrapper>
+      {currentImage &&
+        <>
 
-        <PhotoMenuSelectorWrapper>
-        {currentPhotoSet?.images.indexOf(currentImage) > 0 && <>
-          <PhotoMenuOption onClick={() => setCurrentImage(currentPhotoSet?.images[currentPhotoSet?.images.indexOf(currentImage) - 1])}>
-            Last
-          </PhotoMenuOption>
-        </>}
+          <div>
+            {selectedPhotoShoot.title}
+          </div>
 
-        <PhotoMenuOption onClick={() => setCurrentImage(undefined)}>
-          Exit
-        </PhotoMenuOption>
+          <div>
+            {selectedPhotoShoot.description}
+          </div>
 
-        {currentPhotoSet?.images.indexOf(currentImage) < currentPhotoSet?.images.length - 1 && <>
-          <PhotoMenuOption onClick={() => setCurrentImage(currentPhotoSet?.images[currentPhotoSet?.images.indexOf(currentImage) + 1])}>
-            Next
-          </PhotoMenuOption>
-        </>}
+          <div>
+            {currentPhotoSet.label}
+          </div>
+          <div>
+            {currentPhotoSet.description}
+          </div>
+          <ImageViewerWrapper>
+            <ViewedImage
+              src={`${process.env.PUBLIC_URL}/Pictures/${currentPhotoObject.id}/images/${currentImage}`}
+              onClick={ () => {window.open(`${process.env.PUBLIC_URL}/Pictures/${currentPhotoObject.id}/images/${currentImage}`, '_blank')}}
+            />
+          </ImageViewerWrapper>
 
-        {currentPhotoSet?.images.indexOf(currentImage) === currentPhotoSet?.images.length - 1 && <>
-          <PhotoMenuOption onClick={() => setCurrentImage(currentPhotoSet?.images[0])}>
-            Start Over
-          </PhotoMenuOption>
-        </>}
+          <PhotoMenuSelectorWrapper>
+            {currentPhotoSet?.images.indexOf(currentImage) > 0 &&
+              <>
+                <PhotoMenuOption onClick={() => setCurrentImage(currentPhotoSet?.images[currentPhotoSet?.images.indexOf(currentImage) - 1])}>
+                  Last
+                </PhotoMenuOption>
+              </>
+            }
 
-        </PhotoMenuSelectorWrapper>
-      </>}
+            <PhotoMenuOption onClick={() => setCurrentImage(undefined)}>
+              Exit
+            </PhotoMenuOption>
+
+            {currentPhotoSet?.images.indexOf(currentImage) < currentPhotoSet?.images.length - 1 &&
+              <>
+                <PhotoMenuOption onClick={() => setCurrentImage(currentPhotoSet?.images[currentPhotoSet?.images.indexOf(currentImage) + 1])}>
+                  Next
+                </PhotoMenuOption>
+              </>
+            }
+
+            {currentPhotoSet?.images.indexOf(currentImage) === currentPhotoSet?.images.length - 1 &&
+              <>
+                <PhotoMenuOption onClick={() => setCurrentImage(currentPhotoSet?.images[0])}>
+                  Start Over
+                </PhotoMenuOption>
+              </>
+            }
+          </PhotoMenuSelectorWrapper>
+        </>
+      }
 
 
       {!currentImage && <>
