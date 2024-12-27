@@ -8,6 +8,7 @@ export const theme = {
     LimeGreen: '#AFFF33',
     PitchBlack: '#1A1A1A',
     VividYellow: '#FFD700',
+    mainTextColor: 'rgba(210, 217, 226, .8)',
   }
 };
 
@@ -21,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background-attachment: fixed;
-    //color: #D2D9E2;
+    color: ${({ theme }) => theme.colors.mainTextColor};
     font-family: "Bungee Inline", serif;
     font-weight: 400;
     font-style: normal;

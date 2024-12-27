@@ -2,7 +2,7 @@ import styled from 'styled-components/macro';
 
 export const P = styled.p`
   font-size: .8rem;
-  color: #D2D9E2;
+  //color: #D2D9E2;
   margin: 0 0 1rem;
   
   @media (max-width: 600px) {

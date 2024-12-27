@@ -9,6 +9,7 @@ import {AuthContext} from "../Context/AuthContext";
 import Page from "../Templates/Page";
 import Bio from "./Bio";
 import {PhotoObjectsProvider} from "../Templates/PhotoObjects/Context/PhotoObjectsContext";
+import Albums from "./Albums";
 
 export const ALL_ROUTES = [
   {
@@ -20,6 +21,11 @@ export const ALL_ROUTES = [
     url: '/bio',
     title: 'Bio',
     comp: <Bio />
+  },
+  {
+    url: '/albums',
+    title: 'Albums',
+    comp: <Albums />
   },
   {
     url: '/pictures',
