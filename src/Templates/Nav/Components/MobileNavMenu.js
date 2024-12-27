@@ -4,9 +4,10 @@ import styled from 'styled-components/macro';
 const MobileNavUl = styled.ul`
   margin-left:0;
   text-transform: capitalize;
-  padding: 1rem 1rem 5rem;
+  padding: 1rem;
   justify-content: space-evenly;
   list-style-type: none;
+  border: 1px solid ${({ theme }) => theme.colors.mainTextColor};
   
   @media (min-width: 1000px) {
     display: none;
