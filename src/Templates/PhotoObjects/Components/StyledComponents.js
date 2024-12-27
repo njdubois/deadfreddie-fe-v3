@@ -25,6 +25,7 @@ export const PhotoSetDescription = styled.div`
 export const PhotoMenuSelectorWrapper = styled.div`
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 `
 
 export const PhotoMenuOption = styled.div`
