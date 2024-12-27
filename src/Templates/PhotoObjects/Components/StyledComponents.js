@@ -32,7 +32,7 @@ export const PhotoMenuOption = styled.div`
   color: ${({ theme, ...props }) => props.selected ? theme.colors.NeonBlue : theme.colors.ElectricRed};
   text-shadow: 1px 1px  ${({ theme, ...props }) => theme.colors.VividYellow};
   font-size: 1.5rem;
-  
+  margin: .5rem;
   &:hover {
     color: ${({ theme }) => theme.colors.NeonBlue};
   }

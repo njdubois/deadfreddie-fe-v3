@@ -82,7 +82,6 @@ function PhotoObjects({ALL_PHOTO_CATEGORIES}) {
         </>
       }
 
-
       {!currentImage && <>
         <PhotoMenu>
           {ALL_PHOTO_CATEGORIES.map((photoObject, key) => {
