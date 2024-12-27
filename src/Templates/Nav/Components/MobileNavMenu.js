@@ -4,7 +4,7 @@ import styled from 'styled-components/macro';
 const MobileNavUl = styled.ul`
   margin-left:0;
   text-transform: capitalize;
-  padding-left: 1rem;
+  padding: 1rem 1rem 5rem;
   justify-content: space-evenly;
   list-style-type: none;
   

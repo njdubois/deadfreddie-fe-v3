@@ -8,6 +8,7 @@ import React, {useContext} from 'react';
 import {AuthContext} from "../Context/AuthContext";
 import Page from "../Templates/Page";
 import Bio from "./Bio";
+import {PhotoObjectsProvider} from "../Templates/PhotoObjects/Context/PhotoObjectsContext";
 
 export const ALL_ROUTES = [
   {
@@ -23,7 +24,7 @@ export const ALL_ROUTES = [
   {
     url: '/pictures',
     title: 'Pictures',
-    comp: <Pictures />
+    comp: <PhotoObjectsProvider><Pictures /></PhotoObjectsProvider>
   },
 ];
 
