@@ -79,10 +79,15 @@ export const StyledThumbnail = styled.div`
 `;
 
 export const ImageViewerWrapper = styled.div`
-
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  height: 400px;
 `;
 export const ViewedImage = styled.img`
-  height: 400px;
+  max-height: 400px;
+  max-width: 300px;
 `;
 
 export const PhotoMenu = styled.div`
